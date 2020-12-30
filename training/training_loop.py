@@ -26,9 +26,9 @@ from training import dataset
 
 def setup_snapshot_image_grid(training_set):
     gw = np.clip(7680 // training_set.shape[2], 7, 32)
-    gw = gw // 4
+    gw = gw // 8
     gh = np.clip(4320 // training_set.shape[1], 4, 32)
-    gh = gh // 4
+    gh = gh // 8
 
     # Unconditional.
     if training_set.label_size == 0:
